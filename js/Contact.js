@@ -1,15 +1,4 @@
 class Contact {
-    //   constructor(...params) {
-    //     this.firstName = params[0];
-    //     this.lastName = params[1];
-    //     this.address = params[2];
-    //     this.city = params[3];
-    //     this.state = params[4];
-    //     this.zip = params[5];
-    //     this.phoneNo = params[6];
-    //     this.email = params[7];
-    //   }
-
     get name() {
         return this._name;
     }
@@ -76,4 +65,23 @@ class Contact {
         if (emailRegex.test(email)) this._email = email;
         else throw "Given email is in wrong format";
     }
+    toString() {
+        return (
+            "name: " +
+            this.name +
+            ", address: " +
+            this.address +
+            ", state: " +
+            this.state +
+            ", city: " +
+            this.city +
+            ", zip: " +
+            this.zip +
+            ", phoneNo: " +
+            this.phoneNo +
+            ", email = " +
+            this.email
+        );
+    }
+
 }
