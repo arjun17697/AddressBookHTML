@@ -1,4 +1,10 @@
 class Contact {
+    get id() {
+        return this._id;
+    }
+    set id(id) {
+        this._id = id;
+    }
     get name() {
         return this._name;
     }
@@ -67,7 +73,9 @@ class Contact {
     }
     toString() {
         return (
-            "name: " +
+            "id: " +
+            this.id +
+            ", name: " +
             this.name +
             ", address: " +
             this.address +
