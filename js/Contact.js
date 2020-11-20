@@ -27,7 +27,7 @@ class Contact {
     set address(address) {
         const nameRegex = RegExp("^[\\w/,\\s]{4,}$");
         if (nameRegex.test(address)) this._address = address;
-        else throw "Given address is in wrong format";
+        else throw "Min. 4 characters needed and only -/, allowed as special characters";
     }
 
     get city() {
@@ -61,9 +61,9 @@ class Contact {
         return this._phoneNo;
     }
     set phoneNo(phoneNo) {
-        const phoneNoRegex = RegExp("^[0-9]{5}\\s?[0-9]{5}$");
+        const phoneNoRegex = RegExp("^(\\+?91)?\\s?[0-9]{5}\\s?[0-9]{5}$");
         if (phoneNoRegex.test(phoneNo)) this._phoneNo = phoneNo;
-        else throw "Given zip is in wrong format";
+        else throw "Eg. 9009009001, 919009009001, +919009009001, +91 9009009001";
     }
 
     get email() {

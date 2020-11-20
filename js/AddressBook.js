@@ -87,14 +87,14 @@ class Contact {
 
 let addressBook = [
     new Contact(
-        "Akram",
-        "Shaheed",
-        "Berhampore",
-        "Kolkata",
-        "West Bengal",
+        "Akr",
+        "Sha",
+        "Ber",
+        "Kol",
+        "Wesl",
         "740000",
         "9815063455",
-        "akram@gmail.com"
+        "akr@gmail.com"
     ),
 ];
 
