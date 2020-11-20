@@ -63,6 +63,7 @@ const save = () => {
     try {
         let newContact = createContact();
         createAndLoadToAddressBook(newContact);
+        resetForm();
     } catch (e) {
         alert(e);
         return;
@@ -107,10 +108,7 @@ const getInputValueById = (id) => {
     return value;
 };
 
-const setTextValue = (property, text) => {
-    let element = document.querySelector(property);
-    element.textContent = text;
-};
+
 
 // populate to addressbook
 const createAndLoadToAddressBook = (contact) => {
@@ -122,4 +120,26 @@ const createAndLoadToAddressBook = (contact) => {
     }
     localStorage.setItem("Friends", JSON.stringify(addressbook));
     alert(localStorage.getItem("Friends"));
+};
+// reset method
+const resetForm = () => {
+    setValue("#name", "");
+    setValue("#address", "");
+    setValue("#state", "");
+    setValue("#city", "");
+    setValue("#zip", "");
+    setValue("#phone", "");
+    setValue("#email", "");
+    setTextValue(".name-error", "");
+    setTextValue(".address-error", "");
+    setTextValue(".phone-error", "");
+    setTextValue(".email-error", "");
+};
+
+const setValue = (id, value) => {
+    document.querySelector(id).value = value;
+};
+
+const setTextValue = (id, value) => {
+    document.querySelector(id).textContent = value;
 };
