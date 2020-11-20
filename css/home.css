@@ -119,16 +119,14 @@ body {
 td,
 th {
     text-align: left;
-    padding: 5px 8px;
+    padding: 5px;
 }
 
 th {
-    background: #42515f 0% 0% no-repeat padding-box;
-    border-radius: 3px 3px 0px 0px;
-    font: normal normal medium 18px/24px Roboto;
+    font: normal normal medium 14px/15px Lato;
     letter-spacing: 0px;
-    color: #ffffff;
-    text-transform: uppercase;
+    color: #658292;
+    text-transform: capitalize;
     opacity: 1;
     border: 0px solid #dddddd;
 }
@@ -136,7 +134,6 @@ th {
 tr:not(:first-child) {
     background: #ffffff 0% 0% no-repeat padding-box;
     border: 1px solid #e3e3e3;
-    border-radius: 3px;
 }
 
 td {
